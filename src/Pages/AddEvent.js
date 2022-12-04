@@ -78,7 +78,7 @@ const AddEvent = () => {
 
                 const users = { type: events, image: data.data.url, schedule, description, images, invitation, createdAt: new Date().toISOString(), moderator: 'host', category: events, sub_category: "Sub Category,", rigor_rank: 2, attendees: 'user_id', uid: '1', tagline: tag , title}
 
-                fetch('http://localhost:5000/api/v3/app/events', {
+                fetch('https://nudge-server.vercel.app/api/v3/app/events', {
                     method: 'POST',
                     headers: {
                         "content-type": "application/json"

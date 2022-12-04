@@ -16,7 +16,7 @@ export const routes = createBrowserRouter([
     {
         path: '/api/v3/app/:id',
         element: <Edit></Edit>,
-        loader: ({ params }) => fetch(`http://localhost:5000/api/v3/app/${params.id}`)
+        loader: ({ params }) => fetch(`https://nudge-server.vercel.app/api/v3/app/${params.id}`)
     },
     {
         path: '/about',

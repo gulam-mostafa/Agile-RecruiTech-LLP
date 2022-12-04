@@ -13,7 +13,7 @@ const EditCard = ({ event1 }) => {
 
     const handleOnSubmit = event => {
         event.preventDefault();
-        fetch(`http://localhost:5000/api/${event1._id}`, {
+        fetch(`https://nudge-server.vercel.app/api/${event1._id}`, {
             method: "PUT",
             headers: {
                 'content-type': "application/json"

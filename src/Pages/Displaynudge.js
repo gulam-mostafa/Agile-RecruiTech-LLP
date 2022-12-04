@@ -8,7 +8,7 @@ const Displaynudge = () => {
         queryKey: ['selleruser'],
 
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/api/v3/app`);
+            const res = await fetch(`https://nudge-server.vercel.app/api/v3/app`);
             const data = await res.json();
 
             return data;
@@ -18,7 +18,7 @@ const Displaynudge = () => {
     const handleDelete = id => {
         const sureDelete = window.confirm("Are Your Sure, you want delete")
         if (sureDelete) {
-            fetch(`http://localhost:5000/api/v3/app/${id}`,
+            fetch(`https://nudge-server.vercel.app/api/v3/app/${id}`,
                 {
                     method: "DELETE"
                 })
@@ -72,3 +72,5 @@ const Displaynudge = () => {
 };
 
 export default Displaynudge;
+
+
